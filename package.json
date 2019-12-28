@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/mikaelvesavuori/reqperformer.git"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Mikael Vesavuori",
   "main": "dist/reqperformer.js",
   "license": "MIT",
