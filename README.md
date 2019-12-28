@@ -98,7 +98,7 @@ At the time of doing version `1.0.0`, this had global coverage of **76.89%**.
 Load the script from [unpkg](https://unpkg.com) with:
 
 ```
-<script src="https://unpkg.com/reqperformer@1.0.7/dist/reqperformer.js"></script>
+<script src="https://unpkg.com/reqperformer@1.0.8/dist/reqperformer.js"></script>
 ```
 
 Unfortunately with version 1.0.0, I did something wrong on the Unpkg end, so the shorthand syntax (`https://unpkg.com/reqperformer`) will point to a version that does not work with Unpkg. That's why you should prefer the longhand syntax above.

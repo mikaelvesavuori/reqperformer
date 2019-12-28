@@ -22,7 +22,7 @@ export class MakeRequest {
    * 					</tr>`] - Template for the tables' average timing fields
    * @memberof MakeRequest
    */
-  constructor({
+  constructor(
     requestCount = 5,
     doWarmupCall = false,
     mountingDivClassName = `Tables`,
@@ -35,7 +35,7 @@ export class MakeRequest {
     tableRequestTimingFieldTemplate = `<tr>
 						<td><strong>{{AVERAGE_RESP_TIME}}</strong></td>
 					</tr>`
-  }) {
+  ) {
     this.requestCount = requestCount;
     this.doWarmupCall = doWarmupCall;
     this.mountingDivClassName = mountingDivClassName;

@@ -6,13 +6,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 const LicenseCheckerWebpackPlugin = require('license-checker-webpack-plugin');
 
 const srcDir = path.resolve(__dirname, 'src');
-const libDir = path.resolve(__dirname, 'lib');
+const distDir = path.resolve(__dirname, 'dist');
 
 module.exports = {
   context: srcDir,
   entry: './index.mjs',
   output: {
-    path: libDir,
+    path: distDir,
     filename: 'reqperformer.js',
     library: 'ReqPerformer',
     libraryTarget: 'umd'
