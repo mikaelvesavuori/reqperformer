@@ -1,4 +1,4 @@
-# reqperformer
+# ReqPerformer
 
 A tool for response performance testing, which lets you output results to an HTML table.
 
@@ -33,6 +33,35 @@ const rqp = new ReqPerformer.MakeRequest();
 
 rqp.runTests(tests);
 ```
+
+## Configuration
+
+The structure of parameters, and their defaults are:
+
+```
+// The constructor and the default values
+constructor({
+	requestCount = 5,
+	doWarmupCall = false,
+	mountingDivClassName = `Tables`,
+	tableNamePrefix = `Table`,
+	tableElementTemplate = `<table class="{{TABLE_NAME}}"></table>`,
+	tableHeaderFieldTemplate = `<tr><th>{{URL}}</th></tr>`,
+	tableRequestFieldTemplate = `<tr>
+		<td>{{REQUEST_TIME_STRING}}</td>
+	</tr>`,
+	tableRequestTimingFieldTemplate = `<tr>
+		<td><strong>{{AVERAGE_RESP_TIME}}</strong></td>
+	</tr>`
+})
+
+// Example: Setting `requestCount` to 20, `doWarmupCall` to true, and adding custom `mountingDivClassName` and `tableNamePrefix`
+const rqp = new ReqPerformer.MakeRequest(20, true, 'MyReqPerfTable', 'rqp-table');
+```
+
+### Changing the element templates
+
+Make sure to keep the templating values (denoted by double curly braces, like `{{REQUEST_TIME_STRING}}` and `{{TABLE_NAME}}`) since those match hardcoded values in the source code.
 
 ## Commands
 
@@ -69,7 +98,7 @@ At the time of doing version `1.0.0`, this had global coverage of **76.89%**.
 Load the script from [unpkg](https://unpkg.com) with:
 
 ```
-<script src="https://unpkg.com/reqperformer@1.0.5/dist/reqperformer.js"></script>
+<script src="https://unpkg.com/reqperformer@1.0.7/dist/reqperformer.js"></script>
 ```
 
 Unfortunately with version 1.0.0, I did something wrong on the Unpkg end, so the shorthand syntax (`https://unpkg.com/reqperformer`) will point to a version that does not work with Unpkg. That's why you should prefer the longhand syntax above.

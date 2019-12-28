@@ -22,7 +22,7 @@ export class MakeRequest {
    * 					</tr>`] - Template for the tables' average timing fields
    * @memberof MakeRequest
    */
-  constructor(
+  constructor({
     requestCount = 5,
     doWarmupCall = false,
     mountingDivClassName = `Tables`,
@@ -35,7 +35,7 @@ export class MakeRequest {
     tableRequestTimingFieldTemplate = `<tr>
 						<td><strong>{{AVERAGE_RESP_TIME}}</strong></td>
 					</tr>`
-  ) {
+  }) {
     this.requestCount = requestCount;
     this.doWarmupCall = doWarmupCall;
     this.mountingDivClassName = mountingDivClassName;
@@ -58,13 +58,13 @@ export class MakeRequest {
 
     if (this.requestCount >= 25 && this.requestCount <= 100) {
       alert(
-        "You are doing a lot of tests... Be courteous while doing your requests and don't overload other people's resources!\n\nTest will continue."
+        "You are going to do a lot of tests... Be courteous while doing your requests and don't overload other people's resources!\n\nThe test will continue."
       );
     }
 
     if (this.requestCount > 100) {
       alert(
-        "You are doing over 100 requests. This cap exists to prevent over-using it on other people's resources. If you really need to lift the cap, make sure you only target your own resources. You will also have to remove the cap from the source code.\n\nTest will abort."
+        "You have configured a request count of over 100. This cap exists to prevent the potential of over-using this tool on other people's resources.\n\nIf you really need to lift the cap, first make sure you only target your own resources. You will then have to remove the cap from the source code.\n\nThe test will now abort."
       );
       doTestRun = false;
     }
@@ -90,9 +90,9 @@ export class MakeRequest {
       return false;
     }
 
-    // Set automatic number based on number of tables found
-    // NOTE: This will probably mess things up for you if you use tables for something else on the same page!
-    const TABLE_NUMBER = 1 + document.querySelectorAll('table').length;
+    // Set automatic number based on number of tables found within the mounting DIV; begin at 1
+    const TABLE_NUMBER =
+      1 + document.querySelectorAll(`.${this.mountingDivClassName} table`).length;
 
     // Create the table for this test run
     const TABLE = this._createTablePartition(url, TABLE_NUMBER);
