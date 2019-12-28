@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:security/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/standard"
+  ],
+  "globals": {
+    "module": true,
+    "process": true,
+    "window": true
+  },
+  "plugins": ["security", "prettier"],
+  "rules": {
+    "func-names": ["error", "never"],
+    "prefer-destructuring": 0
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  }
+}
