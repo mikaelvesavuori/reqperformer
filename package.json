@@ -39,7 +39,7 @@
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
     "regenerator-runtime": "^0.13.5",
-    "terser-webpack-plugin": "^2.3.4",
+    "terser-webpack-plugin": "^2.3.6",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.11.0"
