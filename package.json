@@ -32,20 +32,26 @@
     "core-js": "3.6.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-security": "^1.4.0",
     "html-webpack-plugin": "^3.2.0",
     "license-checker-webpack-plugin": "^0.1.4",
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
-    "regenerator-runtime": "^0.13.3",
+    "regenerator-runtime": "^0.13.5",
     "terser-webpack-plugin": "^2.3.4",
-    "webpack": "^4.41.4",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.dev.js --mode development",
-    "build": "webpack --config webpack.prod.js --mode production"
+    "build": "webpack --config webpack.prod.js --mode production",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.319.2"
   }
 }
