@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/mikaelvesavuori/reqperformer.git"
   },
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Mikael Vesavuori",
   "main": "dist/reqperformer.js",
   "license": "MIT",
@@ -21,27 +21,27 @@
     "node": ">=6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/runtime": "^7.9.2",
-    "babel-eslint": "^10.0.3",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/runtime": "^7.11.2",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "core-js": "3.6.4",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.10.1",
+    "core-js": "3.6.5",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-security": "^1.4.0",
-    "html-webpack-plugin": "^3.2.0",
-    "license-checker-webpack-plugin": "^0.1.4",
-    "prettier": "^1.19.1",
-    "prettier-eslint": "^9.0.1",
-    "regenerator-runtime": "^0.13.5",
-    "terser-webpack-plugin": "^2.3.6",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
+    "html-webpack-plugin": "^4.4.1",
+    "license-checker-webpack-plugin": "^0.1.5",
+    "prettier": "^2.1.2",
+    "prettier-eslint": "^11.0.0",
+    "regenerator-runtime": "^0.13.7",
+    "terser-webpack-plugin": "^4.2.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
@@ -52,6 +52,6 @@
   },
   "snyk": true,
   "dependencies": {
-    "snyk": "^1.319.2"
+    "snyk": "^1.398.1"
   }
 }
